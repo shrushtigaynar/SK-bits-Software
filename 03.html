@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .otp-inputs input {
+  width: 50px;     
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-color:gray;
+    }
+   
+    .container {
+      font-size: 15px;
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    
+    }
+    .resend {
+      color: black;
+    }
+    #timer {
+      color: orangered;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+ h4{
+    margin: top 70px; ;
+    margin: bottom 5px; ;
+ }
+    
+        
+    </style> 
+</head>
+<body>
+    <a href="02.html" style="position: absolute; top: 10px; left: 10px; font-size: 18px; text-decoration: none; color: blue;">back</a>
+        
+        <div class="otp-box">
+            <h2 style="margin-bottom: 70px;">OTP Verification</h2>
+  <h4 style="color: gray;">Enter OTP</h4>
+  <form>
+    <div class="otp-inputs">
+      <input type="text" maxlength="1"oninput="moveCursor(this, 'otp2')" id="otp1" >
+      <input type="text" maxlength="1"oninput="moveCursor(this, 'otp3')" id="otp2">
+      <input type="text" maxlength="1"oninput="moveCursor(this, 'otp4')" id="otp3">
+      <input type="text" maxlength="1"  id="otp4">
+      <script>
+function moveCursor(current, nextFieldID) {
+  if (current.value.length === 1) {
+    document.getElementById(nextFieldID)?.focus();
+  }
+}
+</script>
+
+    </div>
+    
+    <div class="container">
+ <span class="resend"style="text-align:left">Resend OTP </span>
+  <span id="timer">2:00</span>
+</div>
+
+<script>
+  let minutes = 2;
+  let seconds = 0;
+
+  let timerDisplay = document.getElementById("timer");
+
+  let countdown = setInterval(function() {
+    if (seconds === 0) {
+      if (minutes === 0) {
+        clearInterval(countdown);
+        timerDisplay.innerHTML = "Available now!";
+        timerDisplay.style.color = "green";
+        return;
+      } else {
+        minutes--;
+        seconds = 59;
+      }
+    } else {
+      seconds--;
+    }
+
+    
+    let minStr = minutes < 10 ? "0" + minutes : minutes;
+    let secStr = seconds < 10 ? "0" + seconds : seconds;
+    timerDisplay.innerHTML = minStr + ":" + secStr;
+  }, 1000);
+
+  
+</script>
+<input type="submit"value="submit" style="width: 270px; height: 40px; font-size: 16px; 
+        color: aliceblue;background-color: blue;">
+
+        
+</body>
+</html>
