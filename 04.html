@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        div.verify{
+            color: aliceblue;
+        }
+        .circle{
+            width: 20px; 
+            height: 20px; 
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-top: 10px;
+            margin-right: 15px;
+            position: relative;
+        }
+        .box{
+            background-color: rgba(255,255,255, 0.1);
+            border-radius: 15px;
+            padding: 8px;
+            width: 230px;
+            height: 80px;
+            box-shadow: 0 0px rgba(0,0,0, 0.2);
+           float: right;
+           margin: top 10px ;
+           margin: bottom 70px; 
+           font-size: 16px;
+           background-color:rgb(62, 134, 249);
+        margin-top: 20px;
+        display:inline-block;
+         border-color:rgb(70, 144, 247) ;
+         color: aliceblue;
+         
+
+        }
+        .container {
+         display: flex;
+         align-items: center;
+         gap: 20px;  
+  }
+  h3{
+    text-align: center;
+    color: aliceblue;
+  }
+  h6{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 5px;
+  }
+.contain{
+         display: flex;
+         align-items: center;
+         gap: 20px;   
+}
+.bow{
+    background-color: rgba(255,255,255, 0.1);
+            border-radius: 15px;
+            padding: 8px;
+            width: 230px;
+            height: 80px;
+            box-shadow: 0 0px rgba(0,0,0, 0.2);
+           float: right;
+           margin: top 10px ;
+           margin: bottom 70px; 
+           font-size: 16px;
+           background-color:rgb(19, 49, 243);
+        margin-top: 20px;
+        display:inline-block;
+        border-color:rgb(70, 144, 247) ;
+        color: aliceblue;
+
+}       
+
+.align{
+     align-items: center; 
+      gap: 15px; 
+} 
+
+.line {
+      width: 20px;
+      height: 00px;
+      border-left: 2px dashed whitesmoke;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    a.fullscreen-link {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+
+    <a href ="005.html" class="fullscreen-link"></a>
+
+    <div class="verify">
+        Home / Account / KYC Verification
+    </div>
+    <div class="container">
+    <div class="circle"></div>
+    <div class="box">
+        <div class="align">
+       <img src="personal.png"style="width: 20px;height: auto;">
+        <span style="font-size: 14px;"> Personal Information</span>
+        </div>
+        <span style="font-size: 11px;">1/2</span>
+        <h6>provide us with details about yourself</h6>
+    </div>
+</div>
+<div class="line"></div>
+<div class="contain">
+    <div class="circle"></div>
+    <div class="bow">
+    <div class="align">
+       <img src="doc.jpg"style="width: 20px;height: auto;">
+        <span style="font-size: 14px;"> Identification Document</span>
+        </div>
+        <span style="font-size: 11px;">2/2</span>
+        <h6>confirm your identity</h6>
+    </div>
+</div>
+    <svg height="200" width="200">
+  <line x1="20" y1="100" x2="20" y2="200" 
+        style="stroke:aliceblue;stroke-width:2;stroke-dasharray:5,5" />
+</svg>
+</body>
+</html>
